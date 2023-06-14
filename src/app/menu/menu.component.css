@@ -1,0 +1,8 @@
+div {
+  display: flex;
+  justify-content: flex-start;
+}
+a {
+  padding: 10px;
+  margin-right: 20px;
+}
