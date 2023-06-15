@@ -11,5 +11,9 @@ fieldset {
   flex-direction: column;
 }
 
+.btn {
+  text-align: center;
+}
+
 
 
