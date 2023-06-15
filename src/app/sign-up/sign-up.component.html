@@ -1,1 +1,88 @@
-<p>sign-up works!</p>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <fieldset>
+    <label for="firstName">First Name:</label>
+    <input
+      id="firstName"
+      ngModel
+      name="firstName"
+      type="text"
+      #firstName="ngModel"
+      required
+      minlength="3"
+      maxlength="15"
+    />
+    <div class="error" *ngIf="form.submitted">
+      <span *ngIf="firstName.errors?.['required']">First Name is required!</span>
+      <span *ngIf="firstName.errors?.['minlength']"
+        >First Name must be at least three characters long!</span
+      >
+      <span *ngIf="firstName.errors?.['maxlength']"
+        >First Name must not exceed 15 characters!</span
+      >
+    </div>
+  </fieldset>
+
+  <br />
+  <fieldset>
+    <label for="lastName">Last Name:</label>
+    <input
+      id="lastName"
+      ngModel
+      name="lastName"
+      type="text"
+      #lastName="ngModel"
+      required
+      minlength="3"
+      maxlength="15"
+    />
+    <div class="error" *ngIf="form.submitted">
+      <span *ngIf="lastName.errors?.['required']">Last Name is required!</span>
+      <span *ngIf="lastName.errors?.['minlength']"
+        >Last Name must be at least three characters long!</span
+      >
+      <span *ngIf="lastName.errors?.['maxlength']"
+        >Last Name must not exceed 15 characters!</span
+      >
+    </div>
+  </fieldset>
+
+  <br />
+
+  <fieldset>
+    <label for="email">Email:</label>
+    <input
+      id="email"
+      ngModel
+      name="email"
+      type="email"
+      #email="ngModel"
+      required
+      email
+    />
+    <div class="error" *ngIf="form.submitted">
+      <span *ngIf="email.errors?.['required']">Email is required!</span>
+      <span *ngIf="email.errors?.['email']"
+        >Please enter a valid email address!</span
+      >
+    </div>
+  </fieldset>
+
+  <br />
+  <fieldset>
+    <label for="password">Password:</label>
+    <input
+      id="password"
+      ngModel
+      name="password"
+      type="password"
+      #password="ngModel"
+      required
+    />
+    <div class="error" *ngIf="form.submitted">
+      <span *ngIf="password.errors?.['required']">Password is required!</span>
+    </div>
+  </fieldset>
+
+  <br />
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,15 @@
+.error {
+  color: red;
+  background-color: yellow;
+}
+form {
+  padding: 25px;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
