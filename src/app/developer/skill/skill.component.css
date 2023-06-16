@@ -1,0 +1,9 @@
+.ctn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+img {
+  width: 30px;
+  height: 30px;
+}

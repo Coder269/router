@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import {RouterModule} from '@angular/router';
 import { RouterTestingModule } from "@angular/router/testing";
+import { DeveloperComponent } from './developer/developer.component';
+import { SkillComponent } from './developer/skill/skill.component';
 
 
 
@@ -17,7 +19,9 @@ import { RouterTestingModule } from "@angular/router/testing";
     AppComponent,
     UserProfileComponent,
     MenuComponent,
-    SignUpComponent
+    SignUpComponent,
+    DeveloperComponent,
+    SkillComponent
   ],
   imports: [
     BrowserModule,
